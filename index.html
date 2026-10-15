@@ -180,26 +180,6 @@
   .steps__copy .v-label { display: block; margin-bottom: var(--v-3); color: var(--v-accent); }
   .steps__copy .v-display { text-wrap: balance; }
 
-  /* ---- отзывы с Яндекс.Карт: слоты под настоящие ---------------------------- */
-  .reviews__head { display: flex; flex-wrap: wrap; gap: var(--v-6); align-items: end; justify-content: space-between; margin-bottom: var(--v-7); }
-  .reviews__rating { display: flex; align-items: center; gap: var(--v-3); font-size: var(--v-t-sm); flex-wrap: wrap; }
-  .reviews__rating a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-2); }
-  .reviews__num { font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1; }
-  .reviews__stars { --size: 1.1rem; display: inline-block; width: calc(var(--size) * 5); height: var(--size);
-    background: linear-gradient(90deg, var(--v-accent) calc(var(--r, 0) / 5 * 100%), var(--v-hair-strong) 0);
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x; }
-  .reviews__stars--sm { --size: .8rem; vertical-align: middle; }
-  .reviews__list { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--v-6); align-items: start; }
-  .reviews__item { padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
-  .reviews__item--big .reviews__text { font-size: var(--v-t-lg); line-height: 1.4; }
-  .reviews__text { text-wrap: pretty; }
-  .reviews__meta { margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
-  .reviews__meta b { color: var(--v-ink); font-weight: 600; }
-  .reviews__fact { margin-top: var(--v-7); padding-top: var(--v-5); border-top: 1px solid var(--v-hair); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
-  .reviews__fact b { color: var(--v-ink); font-weight: 600; }
-  @media (max-width: 860px) { .reviews__list { grid-template-columns: 1fr; } }
-
   /* ---- гарантии ------------------------------------------------------------- */
   .promise { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-8); align-items: center; }
   .promise__facts li { padding: var(--v-5) 0; border-top: 1px solid var(--v-hair); display: grid; gap: var(--v-1); }
@@ -215,31 +195,17 @@
     background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), rgb(242 169 59 / .22), transparent 60%); }
   .close__inner { align-self: center; display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--v-9); align-items: start; padding-bottom: var(--v-9); }
   .close__inner .v-display { margin-bottom: var(--v-6); }
-  .book { display: grid; grid-template-columns: 1fr 1fr auto; gap: var(--v-3); align-items: end; }
-  .book__field { display: grid; gap: .5em; }
-  .book__field .v-label { padding-left: .2em; }
-  .book input, .book select { width: 100%; font: inherit; font-size: var(--v-t-base); color: var(--v-ink); background: var(--v-surface);
-    border: 1px solid var(--v-hair-strong); border-radius: 999px; padding: .8em 1.2em; min-height: 3.25rem; outline: none;
-    transition: border-color .16s var(--v-ease-out), box-shadow .16s var(--v-ease-out); }
-  .book input::placeholder { color: var(--v-ink-soft); }
-  .book select { -webkit-appearance: none; appearance: none; padding-right: 2.6em; cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 8l5 5 5-5' fill='none' stroke='%239d9a92' stroke-width='1.6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 1em center; background-size: 1.1em; }
-  .book select:invalid { color: var(--v-ink-soft); }
-  .book select option { color: var(--v-ink); background: var(--v-surface); }
-  .book input:focus, .book select:focus { border-color: var(--v-accent); box-shadow: 0 0 0 3px rgb(242 169 59 / .18); }
-  .book button.v-btn { min-height: 3.25rem; padding: 0 1.6em; background: var(--v-accent); color: var(--v-accent-ink); border: 0; box-shadow: var(--v-e1); }
-  .book__note { grid-column: 1 / -1; font-size: var(--v-t-sm); color: var(--v-ink-soft); margin-top: var(--v-1); }
+  .book { display: grid; gap: var(--v-3); justify-items: start; }
+  .book__go { min-height: 3.5rem; padding: 0 2em; font-size: var(--v-t-base); }
+  .book__note { font-size: var(--v-t-sm); color: var(--v-ink-soft); max-width: 46ch; }
   .book__alt { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3); margin-top: var(--v-6); }
   .book__alt .v-label { margin-right: var(--v-1); }
   .close__meta { display: grid; gap: var(--v-3); color: var(--v-ink-soft); padding-top: var(--v-2); }
   .close__meta b { color: var(--v-ink); font-weight: 600; }
-  .close__tel { font-family: var(--v-font-display); font-weight: 500; font-size: var(--v-t-xl); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; justify-self: start; margin-bottom: var(--v-2); color: var(--v-ink); }
-  .close__slot b { color: var(--v-accent); }
+  .close__tel { white-space: nowrap; font-family: var(--v-font-display); font-weight: 500; font-size: clamp(1.25rem, .8rem + 1.5vw, 2.1rem); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; justify-self: start; margin-bottom: var(--v-2); color: var(--v-ink); }
   .book__consent { grid-column: 1 / -1; font-size: var(--v-t-xs); color: var(--v-ink-soft); }
   .book__consent a, .foot a { color: inherit; text-decoration-color: var(--v-hair-strong); text-underline-offset: .2em; }
   .book__consent a:hover, .foot a:hover { color: var(--v-ink); }
-  .book__note.is-ok { color: var(--v-accent); }
   .foot { border-top: 1px solid var(--v-hair); padding: var(--v-7) 0 var(--v-6); font-size: var(--v-t-sm); color: var(--v-ink-soft); display: grid; gap: var(--v-6); }
   .foot__grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr 1.1fr; gap: var(--v-6) var(--v-7); }
   .foot__col { display: grid; gap: .35em; align-content: start; }
@@ -266,8 +232,6 @@
   @media (max-width: 860px) {
     .close { min-height: 0; padding-top: clamp(5rem, 12vh, 7rem); }
     .close__inner { grid-template-columns: 1fr; gap: var(--v-7); padding-bottom: var(--v-8); }
-    .book { grid-template-columns: 1fr; }
-    .book button.v-btn { justify-content: center; }
     .close__tel { font-size: var(--v-t-lg); }
   }
 </style>
@@ -282,7 +246,7 @@
     <nav class="bar__right" aria-label="Быстрые ссылки">
       <a class="bar__tel" href="tel:+78432054817">+7 (843) 205-48-17</a>
       <a class="v-btn v-btn--ghost" href="#ceny">Цены</a>
-      <a class="v-btn" href="#zapis">Записаться</a>
+      <a class="v-btn" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer">Записаться</a>
     </nav>
   </header>
 
@@ -316,7 +280,7 @@
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Шиномонтаж в Казани по записи – переобуем за 30 минут</h1>
           <p class="v-lede">К своему времени, на ул. Пролетарская, 14: записываетесь заранее, цену знаете до приезда, балансировка уже в стоимости.</p>
           <div class="hero__cta">
-            <a class="v-btn" href="#zapis">Записаться</a>
+            <a class="v-btn" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer">Записаться</a>
             <a class="v-btn v-btn--ghost" href="#ceny">Цены</a>
           </div>
         </div>
@@ -357,7 +321,7 @@
           </div>
 
           <div class="season__after">
-            <a class="v-btn" href="#zapis" data-v-cue="0.7 1 0.05 0">Записаться</a>
+            <a class="v-btn" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer" data-v-cue="0.7 1 0.05 0">Записаться</a>
           </div>
         </div>
       </div>
@@ -422,36 +386,6 @@
       </div>
     </section>
 
-    <!-- 5 · ДОВЕРИЕ: отзывы с Яндекс.Карт (только настоящие, слоты) -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#0b0d11" id="otzyvy" aria-label="Отзывы с Яндекс.Карт">
-      <div class="v-wrap reviews">
-        <div class="reviews__head" data-v-in data-v-stagger="60">
-          <h2 class="v-display v-display--md">Что пишут на Яндекс.Картах</h2>
-          <div class="reviews__rating">
-            <span class="reviews__num v-nums">4,8</span>
-            <span class="reviews__stars" style="--r: 4.8" aria-label="рейтинг 4,8 из 5"></span>
-            <span class="v-soft">86 отзывов</span>
-            <a href="https://yandex.ru/maps/43/kazan/search/%D0%A8%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B2%D0%BE%D1%80%20%D0%9F%D1%80%D0%BE%D0%BB%D0%B5%D1%82%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%2014/" target="_blank" rel="noopener noreferrer">Читать все отзывы</a>
-          </div>
-        </div>
-        <ul class="reviews__list" data-v-in data-v-stagger="90">
-          <li class="reviews__item reviews__item--big">
-            <p class="reviews__text">«Записалась на 18:00, машину переобули к своему времени. Ждала минут десять, не больше. Балансировка уже в цене, отдельно не просили.»</p>
-            <p class="reviews__meta"><b>Марина</b> · сентябрь 2026 · <span class="reviews__stars reviews__stars--sm" style="--r: 5"></span></p>
-          </li>
-          <li class="reviews__item">
-            <p class="reviews__text">«Цену назвали до приезда, на месте она не изменилась. Проколотое колесо заклеили сразу, без разговоров про «лучше новое».»</p>
-            <p class="reviews__meta"><b>Алексей</b> · август 2026 · <span class="reviews__stars reviews__stars--sm" style="--r: 5"></span></p>
-          </li>
-          <li class="reviews__item">
-            <p class="reviews__text">«Вечером можно записаться на ближайший день. Диски не поцарапали, комплект на хранение отдали с бирками.»</p>
-            <p class="reviews__meta"><b>Дмитрий</b> · апрель 2026 · <span class="reviews__stars reviews__stars--sm" style="--r: 4"></span></p>
-          </li>
-        </ul>
-        <p class="reviews__fact" data-v-in data-v-in-self>Работаем с <b>2019</b> года: за это время переобули больше <b>40 000</b> комплектов.</p>
-      </div>
-    </section>
-
     <!-- 6 · ОБЕЩАНИЕ: гарантии -->
     <section class="v-section" data-v-act="flow" data-v-drift="#0d1016" aria-label="Что обещаем">
       <div class="v-wrap promise">
@@ -476,24 +410,13 @@
         <div class="close__inner">
           <div data-v-in data-v-stagger="80">
             <h2 class="v-display v-display--lg">Запишитесь к своему времени</h2>
-            <form class="book" data-book>
-              <label class="book__field"><span class="v-label">Телефон</span><input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7" required></label>
-              <label class="book__field"><span class="v-label">Когда удобно</span>
-                <select name="time" required>
-                  <option value="" disabled selected>Выберите окно</option>
-                  <option>Сегодня после 18:00</option>
-                  <option>Завтра утром</option>
-                  <option>Завтра вечером</option>
-                  <option>В выходные</option>
-                </select>
-              </label>
-              <button class="v-btn" type="submit" data-v-magnet="0.22">Записаться</button>
-              <p class="book__note" role="status" aria-live="polite">Перезвоним, подтвердим время и назовём цену до приезда.</p>
-              <p class="book__consent">Нажимая «Записаться», вы соглашаетесь на обработку персональных данных согласно <a href="#privacy" data-policy>политике конфиденциальности</a>.</p>
-            </form>
+            <div class="book">
+              <a class="v-btn book__go" href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer" data-v-magnet="0.22">Записаться в Telegram</a>
+              <p class="book__note">Бот покажет свободные окна, подтвердит время и назовёт цену до приезда.</p>
+              <p class="book__consent">Записываясь через Telegram-бота, вы соглашаетесь на обработку персональных данных согласно <a href="#privacy" data-policy>политике конфиденциальности</a>.</p>
+            </div>
             <div class="book__alt">
               <span class="v-label">Или так</span>
-              <a class="v-btn v-btn--ghost" href="https://t.me/shinnydvor_kzn" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
               <a class="v-btn v-btn--ghost" href="tel:+78432054817">Позвонить</a>
             </div>
           </div>
@@ -518,7 +441,7 @@
               <h3>Контакты</h3>
               <a href="tel:+78432054817">+7 (843) 205-48-17</a>
               <a href="mailto:info@shinnydvor-kzn.ru">info@shinnydvor-kzn.ru</a>
-              <a href="https://t.me/shinnydvor_kzn" target="_blank" rel="noopener noreferrer">Telegram</a>
+              <a href="https://t.me/shinnydvor_kzn_bot" target="_blank" rel="noopener noreferrer">Telegram-бот</a>
               <a href="https://wa.me/78432054817" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
             <div class="foot__col">
@@ -532,7 +455,6 @@
               <a href="#ceny">Шиномонтаж и балансировка</a>
               <a href="#ceny">Ремонт проколов</a>
               <a href="#ceny">Сезонное хранение шин</a>
-              <a href="#otzyvy">Отзывы</a>
             </div>
           </div>
           <div class="foot__bar">
@@ -548,14 +470,14 @@
             <p>Редакция от 15 октября 2026 года. Настоящий документ описывает, как ООО «Шинный двор» (ИНН 1655428310, ОГРН 1191600481270, адрес: 420107, г. Казань, ул. Пролетарская, д. 14, пом. 1; далее – Оператор) обрабатывает персональные данные посетителей сайта.</p>
             <h3>1. Какие данные мы получаем</h3>
             <ul>
-              <li>номер телефона, который вы указываете в форме записи;</li>
-              <li>желаемое время визита, которое вы выбираете в форме;</li>
-              <li>технические данные посещения (адрес страницы, тип браузера), если они фиксируются сервером.</li>
+              <li>имя и идентификатор вашего профиля в Telegram, когда вы пишете нашему боту записи;</li>
+              <li>номер телефона, если вы сообщаете его боту или звоните нам;</li>
+              <li>желаемое время визита и сведения об автомобиле, которые вы указываете при записи.</li>
             </ul>
             <h3>2. Зачем мы их обрабатываем</h3>
-            <p>Только для того, чтобы связаться с вами, подтвердить запись, назвать стоимость услуги и оказать услугу. Рекламные рассылки без вашего отдельного согласия не отправляем.</p>
+            <p>Сам сайт персональные данные не собирает: запись ведётся в Telegram-боте и по телефону. Данные нужны только для того, чтобы связаться с вами, подтвердить запись, назвать стоимость услуги и оказать услугу. Рекламные рассылки без вашего отдельного согласия не отправляем.</p>
             <h3>3. Правовое основание</h3>
-            <p>Ваше согласие, которое вы даёте, отправляя форму записи (Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных»).</p>
+            <p>Ваше согласие, которое вы даёте, начиная запись в Telegram-боте или обращаясь к нам другим способом (Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных»).</p>
             <h3>4. Срок хранения и передача третьим лицам</h3>
             <p>Данные хранятся не дольше, чем нужно для записи и оказания услуги, но не более 12 месяцев с даты обращения, после чего удаляются. Мы не передаём их третьим лицам, кроме случаев, прямо предусмотренных законом.</p>
             <h3>5. Ваши права</h3>
@@ -593,30 +515,6 @@
     }
     new IntersectionObserver(function (es) { live = es[0].isIntersecting; if (live) tick(); }).observe(act);
     tick();
-  })();
-
-  // Форма записи: на статическом хостинге нет сервера, поэтому заявка уходит письмом на почту компании.
-  // Когда появится приём заявок (CRM, бот, форма Тильды), заменить ТОЛЬКО эту функцию.
-  (function () {
-    var f = document.querySelector('[data-book]');
-    var note = f.querySelector('.book__note');
-    var MAIL = 'info@shinnydvor-kzn.ru';
-    f.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var phone = f.elements.phone.value.trim();
-      var digits = phone.replace(/\D/g, '');
-      if (digits.length < 10 || digits.length > 12) {
-        note.classList.remove('is-ok');
-        note.textContent = 'Проверьте номер: нужно 10 цифр после +7.';
-        f.elements.phone.focus();
-        return;
-      }
-      var when = f.elements.time.value;
-      var body = 'Заявка на шиномонтаж с сайта.\nТелефон: ' + phone + '\nКогда удобно: ' + when + '\n';
-      note.classList.add('is-ok');
-      note.textContent = 'Открываем письмо с заявкой – нажмите «Отправить». Или позвоните: +7 (843) 205-48-17.';
-      window.location.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Запись на шиномонтаж') + '&body=' + encodeURIComponent(body);
-    });
   })();
 
   // Политика конфиденциальности: окно по ссылке #privacy (из формы, футера и прямой ссылки).
